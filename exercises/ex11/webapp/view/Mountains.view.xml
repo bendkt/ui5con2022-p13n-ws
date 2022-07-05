@@ -1,0 +1,123 @@
+<mvc:View
+    height="100%"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:sap.ui.fl="sap.ui.fl"
+    xmlns:vm="sap.ui.fl.variants"
+    xmlns:ctl="ui5con.p13nApp.control"
+    controllerName="ui5con.p13nApp.controller.Mountains">
+
+	<f:DynamicPage id="dynamicPageId">
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="Mountain Filter Grid"/>
+				</f:heading>
+
+				<f:actions>
+                    <ToggleButton id="toggleRangeButton" text="Toggle Range" press=".onToggleRange" type="Transparent"/>
+                    <Button id="clearFilterButton" icon="sap-icon://clear-filter" type="Transparent" press=".onClearFilterPress"/>
+                    <Button id="gridFilterButton" icon="sap-icon://grid" type="Transparent" press=".onGridFilterPress"/>
+                    <Button id="p13nButton" icon="sap-icon://action-settings" type="Transparent" press=".onP13nPress"/>
+                     <vm:VariantManagement id="myVM" for="table,gridFilter"/>
+                </f:actions>
+               
+			</f:DynamicPageTitle>
+		</f:title>
+		<f:header>
+			<f:DynamicPageHeader pinnable="true">
+                <f:GridList
+                    id="gridFilter"
+                    sap.ui.fl:flexibility="sap/m/flexibility/EngineFlex" 
+                    items="{filters>/filters}"
+                    mode="MultiSelect"
+                    includeItemInSelection="true"
+                    selectionChange=".onGridFilterSelect">
+                    <f:GridListItem type="Active">
+                        <HBox class="sapUiSmallMarginTopBottom">
+                            <core:Icon
+                                src="{filters>icon}"
+                                color="{filters>color}"
+                                size="2.5rem"
+                                class="sapUiSmallMarginBeginEnd"/>
+                            <VBox class="sapUiSmallMarginEnd">
+                                <Title text="{filters>label}"/>
+                                <Label text="{filters>description}"/>
+                            </VBox>
+                        </HBox>
+                    </f:GridListItem>
+                </f:GridList>
+            </f:DynamicPageHeader>
+        </f:header>
+		<f:content>
+			<VBox>
+                <ctl:P13nTable id="table"
+                    sap.ui.fl:flexibility="sap/m/flexibility/EngineFlex" 
+                    inset="false"
+                    items="{mountains>/mountains}">
+                    <ctl:columns>
+                        <Column id="name"
+                            width="12em">
+                            <Text text="Name" />
+                        </Column>
+                        <Column id="height"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="Height" />
+                        </Column>
+                        <Column id="prominence"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="Prominence" />
+                        </Column>
+                        <Column id="range"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="Range" />
+                        </Column>
+                        <Column id="coordinates"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="Coordinates" />
+                        </Column>
+                        <Column id="parent_mountain"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="Parent Mountain" />
+                        </Column>
+                        <Column id="first_ascent"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="First Ascent" />
+                        </Column>
+                        <Column id="countries"
+                            minScreenWidth="Tablet"
+                            demandPopin="true">
+                            <Text text="Countries" />
+                        </Column>
+                    </ctl:columns>
+                    <ctl:items>
+                        <ColumnListItem vAlign="Middle">
+                            <cells>
+                                <ObjectIdentifier
+                                    title="{mountains>name}"
+                                    text="{mountains>range}"/>
+                                    <Text text="{mountains>height}" />
+                                    <Text text="{mountains>prominence}" />
+                                    <Text text="{mountains>range}" />
+                                    <Text text="{mountains>coordinates}" />
+                                    <Text text="{mountains>parent_mountain}" />
+                                    <Text text="{mountains>first_ascent}" />
+                                    <Text text="{mountains>countries}" />
+                            </cells>
+                        </ColumnListItem>
+                    </ctl:items>
+                </ctl:P13nTable>
+			</VBox>
+		</f:content>
+	</f:DynamicPage>
+
+</mvc:View>

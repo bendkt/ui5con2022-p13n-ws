@@ -1,0 +1,79 @@
+{ "filters": [
+    {
+        "label": "Very High",
+        "description": "Height > 8 km",
+        "expression": [
+            "height",
+            "GT",
+            8000
+        ],
+        "icon": "sap-icon://collapse-group",
+        "color": "Negative"
+    },
+    {
+        "label": "High",
+        "description": "Height > 7 km",
+        "expression": [
+            "height",
+            "GT",
+            7000
+        ],
+        "icon": "sap-icon://navigation-up-arrow",
+        "color": "Critical"
+    },
+    {
+        "label": "Recently",
+        "description": "Ascent > 2000",
+        "expression": [
+            "first_ascent",
+            "GT",
+            2000
+        ],
+        "icon": "sap-icon://badge",
+        "color": "Default"
+    },
+    {
+        "label": "Nepal",
+        "description": "In Nepal",
+        "expression": [
+            "countries",
+            "Contains",
+            "Nepal"
+        ],
+        "icon": "sap-icon://favorite",
+        "color": "Marker"
+    },
+    {
+        "label": "Himalaya",
+        "description": "In Himalaya",
+        "expression": [
+            "range",
+            "Contains",
+            "Himalaya"
+        ],
+        "icon": "sap-icon://background",
+        "color": "Positive"
+    },
+    {
+        "label": "Karakoram",
+        "description": "In Karakoram",
+        "expression": [
+            "range",
+            "Contains",
+            "Karakoram"
+        ],
+        "icon": "sap-icon://background",
+        "color": "Positive"
+    },
+    {
+        "label": "Mt Everest",
+        "description": "In Mt Everest",
+        "expression": [
+            "parent_mountain",
+            "Contains",
+            "Mount Everest"
+        ],
+        "icon": "sap-icon://card",
+        "color": "Neutral"
+    }
+]}
