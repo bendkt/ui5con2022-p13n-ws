@@ -43,5 +43,6 @@ This is the application you build during the tutorial:
 ## Authors
 * [Benedikt Schölch](https://github.com/bendkt)
 * [Martin Häuser](https://github.com/martinhaeuser)
+
 ## License
 Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved.
