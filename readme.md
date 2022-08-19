@@ -40,6 +40,9 @@ This is the application you build during the tutorial:
 
 [Have a look now!](https://bendkt.github.io/ui5con2022-p13n-ws/exercises/ex11/webapp/index.html)
 
+## Feedback and Issues
+Please do not hesitate to let us know if you find something that is wrong or could be improved. You can open a [new issue](https://github.com/bendkt/ui5con2022-p13n-ws/issues/new) in this repository.
+
 ## Authors
 * [Benedikt Schölch](https://github.com/bendkt)
 * [Martin Häuser](https://github.com/martinhaeuser)
