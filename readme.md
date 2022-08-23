@@ -8,6 +8,8 @@ In this tutorial you can learn how to add personalization capabilities to almost
 
 You will be lead through the enablement of a custom control using the assets provided by UI5. You can also learn, how to use those assets to enhance your application with personalization capabilities. You should be able to apply your knowledge afterwards in your own application or control development. 
 
+A recording of the corresponding UI5Con workshop is available on [UI5con HYBRID 2022: P13nify Everything - Personalization for Any Control (Workshop)](https://www.youtube.com/watch?v=LclKOae-ts0).
+
 ### UI5 Components in Focus
 * `sap.m.p13n.Engine`
 * `sap.ui.fl.variants.VariantManagement`
