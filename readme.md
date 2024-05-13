@@ -1,5 +1,8 @@
 # P13nify Everything - Personalization for Any Control
 
+> ### ⚠️ Note
+> The tutorial moved to https://github.com/SAP-samples/ui5-p13n-tutorial. This git repo will become an archive and will not receive updates.
+
 Made with ❤️ for  
 [![UI5Con Hybrid 2022](images/ui5con_title.png)](https://openui5.org/ui5con/germany2022/)
 
